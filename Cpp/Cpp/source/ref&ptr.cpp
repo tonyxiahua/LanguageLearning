@@ -1,4 +1,9 @@
-//这个文件用于熟悉 “左值引用” 以及 “指针” 的定义和一些用法
+/*
+DATE：20190613
+BY： Richard Crother
+
+这个文件用于熟悉 “左值引用” 以及 “指针” 的定义和一些用法
+*/
 #include <iostream>
 using namespace std;
 
