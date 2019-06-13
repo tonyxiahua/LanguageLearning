@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ref&amp;ptr.cpp">
+    <ClCompile Include="source\ref&amp;ptr.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
