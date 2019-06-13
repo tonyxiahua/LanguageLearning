@@ -60,6 +60,32 @@ void ptrBase()
 
 }
 
+/*
+“指针和数组的关系”
+	在Windows操作系统的实现里，数组其实是用指针来实现的
+
+*/
+void ptrWithArray()
+{
+	//C++11标准新增了内容，使用using A = B 来表示 A是B的一个别名
+	using pcharArray = char*;
+
+	pcharArray ptrArray;
+	char Array[5] = "ABCD";
+
+	//因数组的变量名在编译时会被编译器替换为首字符的指针，所以此处实际上是将一个指针赋值给另一个指针（地址复制）
+	ptrArray = Array;
+	cout << *ptrArray << endl;
+	cout << &Array << endl;
+
+
+	cout << Array << endl;
+	cout << ptrArray << endl;
+
+
+}
+
+
 
 
 
@@ -83,6 +109,6 @@ int main()
 	ptrBase();
 	cout << endl;
 /////////////////////////////////////////////////
-
+	ptrWithArray();
 	return 0;
 }
