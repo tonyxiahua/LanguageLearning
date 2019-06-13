@@ -62,7 +62,7 @@ void ptrBase()
 
 /*
 “指针和数组的关系”
-	在Windows操作系统的实现里，数组其实是用指针来实现的
+	在编译时，数组其实是用指针来实现的
 
 */
 void ptrWithArray()
@@ -71,7 +71,7 @@ void ptrWithArray()
 	using pcharArray = char*;
 
 	pcharArray ptrArray;
-	char Array[5] = "ABCD";
+	char Array[5] = {'A','B','C','D'};
 
 	//因数组的变量名在编译时会被编译器替换为首字符的指针，所以此处实际上是将一个指针赋值给另一个指针（地址复制）
 	ptrArray = Array;
@@ -81,6 +81,13 @@ void ptrWithArray()
 
 	cout << Array << endl;
 	cout << ptrArray << endl;
+	cout << endl;
+
+	//作为迭代器使用的指针
+	for (int i = 0; i < 4; i++)
+	{
+		cout << *ptrArray++ << endl;
+	}
 
 
 }
